@@ -432,7 +432,7 @@ img {
 /* Company Section Styles */
 .profile-container {
     display: flex;
-    gap: 60px;
+    gap: 40px;
     align-items: flex-start;
     margin-bottom: 100px;
     max-width: 900px;
@@ -441,28 +441,37 @@ img {
 }
 
 .profile-left {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 24px;
+    position: relative;
+    /* Anchor for absolute book */
     width: 240px;
+    height: 240px;
+    /* Ensure height matches img so book anchor is correct relative to img */
     flex-shrink: 0;
+    /* Removed margin-right as gap handles spacing */
 }
+
+/* On mobile, profile-left might need different margin or centering */
 
 .profile-img {
     width: 240px;
     height: 240px;
     border-radius: 50%;
     object-fit: cover;
-    /* flex-shrink: 0; Removed as parent handles it now */
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
 }
 
 .profile-book {
-    width: 140px;
-    height: auto;
+    position: absolute;
+    bottom: -8px;
+    /* Slight overlap at bottom, sticking out ~8px */
+    right: -8px;
+    /* Stick out ~8px to the right */
+    height: 156px;
+    /* 65% of 240px */
+    width: auto;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
     transition: transform 0.3s ease;
+    z-index: 10;
 }
 
 .profile-book:hover {
@@ -731,5 +740,345 @@ footer {
 
     .mobile-menu-btn span:nth-child(3) {
         bottom: 0;
+    }
+}
+
+/* Why Section */
+.why-slogan-container {
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.why-slogan {
+    font-size: 2.5rem;
+    /* Matched OUR VALUE header size or slightly larger */
+    font-weight: 700;
+    margin-bottom: 24px;
+    letter-spacing: 0.1em;
+}
+
+.why-sub-text {
+    font-size: 1rem;
+    color: var(--color-text);
+    opacity: 0.8;
+}
+
+.why-header {
+    text-align: center;
+    margin-bottom: 60px;
+    position: relative;
+    display: inline-block;
+    left: 50%;
+    transform: translateX(-50%);
+    padding-bottom: 16px;
+    border-bottom: 1px solid #E0E0E0;
+    width: fit-content;
+    min-width: 200px;
+}
+
+.why-title {
+    font-size: 2.2rem;
+    /* Matched OUR VALUE (2.5rem) approx */
+    font-weight: 900;
+    margin-bottom: 8px;
+    letter-spacing: 0.05em;
+    font-family: var(--font-main);
+}
+
+.why-subtitle {
+    display: block;
+    font-size: 1rem;
+    font-weight: 500;
+    opacity: 0.8;
+}
+
+.why-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 32px;
+    max-width: 1000px;
+    margin: 0 auto 100px auto;
+    /* Added bottom margin */
+}
+
+/* Updated to match OUR VALUE card style exactly if possible, or refined based on instructions */
+.why-card {
+    background-color: #fff;
+    border: 2px solid var(--color-text);
+    /* Matches OUR VALUE card */
+    padding: 32px;
+    /* Uniform padding */
+    width: calc(33.333% - 22px);
+    min-width: 280px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Center content for number */
+    text-align: center;
+    /* Center everything initially */
+}
+
+.why-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 10px 10px 0px rgba(0, 0, 0, 0.1);
+}
+
+/* Number Circle */
+.why-number {
+    width: 48px;
+    height: 48px;
+    background-color: #F1F1F1;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 900;
+    font-size: 1.1rem;
+    color: var(--color-text);
+    margin-bottom: 16px;
+}
+
+.why-card-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    line-height: 1.6;
+    border-bottom: none;
+    padding-bottom: 0;
+    width: 100%;
+    text-align: center;
+    /* Let's center title too based on number being center */
+}
+
+.why-card-text {
+    font-size: 0.95rem;
+    line-height: 1.8;
+    color: var(--color-text);
+    text-align: left;
+    /* Left align text as per usual readability */
+    width: 100%;
+}
+
+/* Integrated Message Block */
+.why-message-block {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 80px auto;
+}
+
+.why-message-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 24px;
+}
+
+
+/* Voice Section */
+.voice-section {
+    background-color: #f9f9f9;
+    /* final bg spec */
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.voice-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.voice-title {
+    font-size: 32px;
+    font-weight: 700;
+    font-family: var(--font-main);
+    margin-bottom: 0;
+}
+
+.voice-subtitle {
+    display: block;
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 16px;
+}
+
+.voice-line {
+    width: 40px;
+    height: 1px;
+    background-color: #ddd;
+    margin: 0 auto;
+}
+
+.voice-grid {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    /* 40px gap */
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.voice-card {
+    background-color: #fff;
+    border-radius: 24px;
+    /* 24px radius */
+    padding: 40px;
+    /* 40px padding */
+    flex: 1;
+    min-width: 300px;
+    border: none;
+    box-shadow: none;
+}
+
+.voice-catch {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.6;
+    margin-bottom: 16px;
+    color: var(--color-text);
+}
+
+.voice-meta {
+    margin-bottom: 24px;
+    line-height: 1.5;
+}
+
+.voice-type {
+    font-size: 14px;
+    font-weight: 400;
+    color: #666;
+}
+
+.voice-support {
+    font-size: 14px;
+    font-weight: 400;
+    color: #666;
+}
+
+.voice-text {
+    font-size: 16px;
+    /* Approx standard */
+    line-height: 1.8;
+    color: var(--color-text);
+    margin-bottom: 24px;
+}
+
+/* User asked for bolding in content but HTML replacement removed <strong> tags to follow "copy paste" content which didn't have <strong> tags in the final prompt text. 
+   Wait, the user's final PROMPT had "本文（段落ごと）... 圧倒的な実行力で..." without explicit <strong> tags in the code block provided in the prompt?
+   Actually, looking closely at the prompt: 
+   "本文（段落ごと）
+   4年前から“いつかやりたい”と話していたライフワークが..."
+   It does NOT explicitly show markdown bolding like **text** or <strong>text</strong> in the final block. 
+   However, the previous prompt had <strong>. 
+   The FINAL user prompt says "✅ ▼ここから下は実際に入れる文章（そのままコピペOK）" and the text there DOES NOT have <strong> tags.
+   I will trust the "Copy Paste OK" text which implies plain text unless I see specific bolding instructions in the text BLOCK itself (which I don't, unrelated to the previous request).
+   So Voice text will be plain as per the latest copy-paste block.
+*/
+
+.voice-note {
+    font-size: 11px;
+    color: #999;
+    text-align: left;
+    margin-top: auto;
+    line-height: 1.4;
+}
+
+/* Tablet / Mobile adjustments */
+@media (max-width: 768px) {
+    .voice-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .voice-card {
+        width: 100%;
+        max-width: 500px;
+        /* Limit width on mobile */
+    }
+}
+
+.why-message-text {
+    font-size: 1rem;
+    line-height: 2;
+}
+
+/* Ideal Customer Block */
+.why-ideal-customer {
+    background-color: #F8F8F8;
+    /* Specific light gray */
+    border-radius: 12px;
+    padding: 90px 40px;
+    /* Increased padding 80-100px */
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.ideal-title {
+    font-size: 20px;
+    /* 18-20px */
+    font-weight: 700;
+    margin-bottom: 32px;
+}
+
+.ideal-intro {
+    font-size: 16px;
+    /* 15-16px */
+    line-height: 2;
+    margin-bottom: 32px;
+}
+
+.ideal-list-container {
+    margin-bottom: 32px;
+}
+
+.ideal-item {
+    font-size: 16px;
+    /* 16px */
+    font-weight: 700;
+    line-height: 2;
+    margin-bottom: 0;
+}
+
+.ideal-footer {
+    font-size: 16px;
+    /* 15-16px */
+    font-weight: 500;
+    margin-top: 32px;
+}
+
+/* Tablet / Mobile adjustments */
+@media (max-width: 900px) {
+    .why-card {
+        width: calc(50% - 16px);
+        /* 2 columns */
+    }
+}
+
+@media (max-width: 768px) {
+    .voice-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .voice-card {
+        width: 100%;
+        max-width: 500px;
+        /* Limit width on mobile */
+    }
+}
+
+@media (max-width: 600px) {
+    .why-card {
+        width: 100%;
+        /* 1 column */
+    }
+
+    .why-slogan {
+        font-size: 1.8rem;
+    }
+
+    .why-ideal-customer {
+        padding: 40px 20px;
     }
 }
