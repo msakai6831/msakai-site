@@ -462,12 +462,11 @@ img {
 
 .profile-book {
     position: absolute;
-    bottom: -8px;
-    /* Slight overlap at bottom, sticking out ~8px */
-    right: -8px;
-    /* Stick out ~8px to the right */
+    bottom: -10px;
+    right: -6px;
+    transform: scale(0.70);
+    transform-origin: bottom right;
     height: 156px;
-    /* 65% of 240px */
     width: auto;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
     transition: transform 0.3s ease;
@@ -475,7 +474,7 @@ img {
 }
 
 .profile-book:hover {
-    transform: scale(1.05);
+    transform: scale(0.75);
 }
 
 .profile-text {
@@ -1076,6 +1075,216 @@ footer {
 
     .why-slogan {
         font-size: 1.8rem;
+    }
+
+    .why-ideal-customer {
+        padding: 40px 20px;
+    }
+}
+
+/* ================================
+   Smartphone adjustments (max 768px)
+   ================================ */
+@media (max-width: 768px) {
+
+    :root {
+        /* 余白とヘッダー高さを少しコンパクトに */
+        --spacing-md: 1.5rem;
+        --spacing-lg: 2.5rem;
+        --spacing-xl: 4rem;
+        --header-height: 60px;
+    }
+
+    body {
+        font-size: 15px;
+    }
+
+    #header {
+        height: var(--header-height);
+    }
+
+    /* HERO：余白＆画像の見え方 */
+    .hero {
+        height: auto;
+        min-height: calc(100vh - var(--header-height));
+        padding: 72px 0 56px;
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    .hero::before {
+        /* 画像を少しだけ濃く見せる */
+        background-color: rgba(255, 255, 255, 0.55);
+    }
+
+    .hero-content {
+        max-width: 100%;
+        padding: 0 1.5rem;
+    }
+
+    .hero-company-name {
+        font-size: 0.9rem;
+        margin-bottom: 16px;
+    }
+
+    .hero-slogan {
+        font-size: 2.2rem;
+        line-height: 1.35;
+        margin-bottom: 32px;
+    }
+
+    .btn-large {
+        width: 100%;
+        max-width: 320px;
+        text-align: center;
+    }
+
+    /* セクション共通：上下余白を整理 */
+    .section {
+        padding: 72px 0;
+    }
+
+    .section-title {
+        font-size: 2rem;
+        margin-bottom: 2.5rem;
+    }
+
+    /* OUR VALUE / SERVICE のカード周り */
+    .card-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .card {
+        padding: 28px 1.25rem;
+    }
+
+    .card-icon {
+        margin-bottom: 1.25rem;
+    }
+
+    .icon-value {
+        width: 140px;
+        height: 140px;
+    }
+
+    .service-item {
+        margin-bottom: 56px;
+        padding-bottom: 40px;
+    }
+
+    /* テキストの読みやすさ（行間＆サイズ） */
+    .card p,
+    .service-desc,
+    .service-list li,
+    .profile-desc,
+    .why-card-text,
+    .voice-text,
+    .ideal-intro,
+    .ideal-footer {
+        font-size: 0.95rem;
+        line-height: 1.8;
+    }
+
+    /* COMPANY：プロフィール画像＆書影調整 */
+    .profile-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 32px;
+        margin-bottom: 72px;
+    }
+
+    .profile-left {
+        width: 200px;
+        height: 200px;
+    }
+
+    .profile-img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .profile-book {
+        height: 130px;
+        bottom: -4px;
+        right: -4px;
+    }
+
+    .profile-text {
+        text-align: left;
+    }
+
+    .company-table {
+        margin-bottom: 72px;
+    }
+
+    .company-table th,
+    .company-table td {
+        display: block;
+        width: 100%;
+        padding: 10px 4px;
+        font-size: 0.9rem;
+    }
+
+    .company-table th {
+        border-bottom: none;
+        padding-bottom: 0;
+    }
+
+    /* Why msakai：カード幅・余白 */
+    .why-slogan-container {
+        margin-bottom: 56px;
+    }
+
+    .why-slogan {
+        font-size: 1.8rem;
+    }
+
+    .why-grid {
+        margin-bottom: 72px;
+    }
+
+    .why-card {
+        width: 100%;
+        max-width: 480px;
+    }
+
+    /* VOICE：カードを少しコンパクトに */
+    .voice-section {
+        padding: 64px 0;
+    }
+
+    .voice-grid {
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .voice-card {
+        padding: 24px 20px;
+        border-radius: 16px;
+        max-width: 520px;
+        margin: 0 auto;
+    }
+
+    .voice-note {
+        font-size: 10px;
+    }
+
+    /* LP誘導・お問い合わせボタン */
+    .lp-induction {
+        padding: 64px 0;
+    }
+
+    .btn-contact {
+        width: 100%;
+        max-width: 320px;
+    }
+}
+
+/* さらに狭い端末向けの微調整 */
+@media (max-width: 600px) {
+    .hero-slogan {
+        font-size: 2rem;
     }
 
     .why-ideal-customer {
