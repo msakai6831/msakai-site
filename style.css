@@ -1404,3 +1404,37 @@ h2.hero-slogan {
         font-size: 2rem;
     }
 }
+
+/* リクエスト対応（最終調整）：HERO H1の位置引き上げ・行間詰め */
+.hero-title-seo {
+    margin-top: -100px; /* さらに上へ（元の-60pxから強化） */
+    line-height: 1.15;  /* 行間を詰める（元の1.3から縮小） */
+}
+
+/* スマホ用調整 */
+@media (max-width: 768px) {
+    .hero-title-seo {
+        margin-top: -60px;
+        line-height: 1.2;
+    }
+}
+
+/* リクエスト対応：スマホ用 HERO H1調整 & ボタン中央寄せ */
+@media (max-width: 768px) {
+    .hero-title-seo {
+        font-size: 26px;      /* 24-28pxの範囲 */
+        line-height: 1.25;    /* 行間を少し詰める */
+        margin-top: 40px;     /* ヘッダーとの距離確保 */
+        padding-top: 20px;
+    }
+
+    .hero-content {
+        text-align: center;   /* ボタン含むコンテンツを中央寄せ */
+        padding-top: 0;       /* 既存の余白調整 */
+    }
+
+    .hero .btn-service-list {
+        margin: 0 auto;       /* ボタン中央配置 */
+        display: inline-block;
+    }
+}
