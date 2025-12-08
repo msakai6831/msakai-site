@@ -1291,3 +1291,33 @@ footer {
         padding: 40px 20px;
     }
 }
+/* ================================================
+   控えめな CATALOG ボタン（SERVICEセクション専用）
+   ================================================ */
+
+.catalog-btn {
+  display: inline-block;
+  padding: 8px 18px;
+  font-size: 0.85rem;
+  color: #555; /* 控えめグレー */
+  border: 1px solid #ccc; /* 薄い枠線 */
+  border-radius: 6px;
+  text-decoration: none;
+  background-color: #fff;
+  transition: all 0.25s ease;
+  margin-top: 20px;
+}
+
+.catalog-btn:hover {
+  color: #222;
+  border-color: #999;
+  background-color: #f7f7f7;
+}
+
+/* スマホは少しだけ大きくして押しやすく */
+@media (max-width: 768px) {
+  .catalog-btn {
+    font-size: 0.9rem;
+    padding: 10px 20px;
+  }
+}
