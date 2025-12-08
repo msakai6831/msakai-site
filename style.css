@@ -1438,3 +1438,59 @@ h2.hero-slogan {
         display: inline-block;
     }
 }
+
+/* リクエスト対応：TopページSEOセクション */
+.section-intro {
+    padding: 60px 0;
+    text-align: center;
+    background-color: #fff;
+}
+
+.intro-lead {
+    display: block;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #555;
+    margin-bottom: 16px;
+    letter-spacing: 0.05em;
+}
+
+.intro-title {
+    font-size: 2rem;
+    font-weight: 900;
+    margin-bottom: 32px;
+    line-height: 1.4;
+}
+
+.intro-text {
+    font-size: 1rem;
+    line-height: 2;
+    max-width: 800px;
+    margin: 0 auto;
+    color: var(--color-text);
+}
+
+@media (max-width: 768px) {
+    .section-intro {
+        padding: 40px 0;
+    }
+    .intro-lead {
+        font-size: 0.9rem;
+    }
+    .intro-title {
+        font-size: 1.5rem;
+        margin-bottom: 24px;
+    }
+    .intro-text {
+        text-align: justify; /* スマホでは両端揃え等、読みやすく */
+        text-align-last: left;
+        font-size: 0.95rem;
+    }
+}
+
+/* PCのみ改行用クラス */
+@media (max-width: 768px) {
+    .pc-only {
+        display: none;
+    }
+}
