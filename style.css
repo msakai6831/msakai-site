@@ -1337,3 +1337,70 @@ footer {
         margin-bottom: 16px;
     }
 }
+
+/* リクエスト対応：HEROサブコピー調整（旧スローガン） */
+h2.hero-slogan {
+  font-size: 1.4rem;  /* 元の極大サイズから縮小 */
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  h2.hero-slogan {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+  }
+}
+
+/* リクエスト対応：Whyセクションへのスローガン移動 */
+.why-moved-slogan {
+    font-size: 2.2rem;
+    font-weight: 900;
+    text-align: center;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    line-height: 1.4;
+    letter-spacing: 0.05em;
+}
+
+@media (max-width: 768px) {
+    .why-moved-slogan {
+        font-size: 1.6rem;
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+}
+
+/* リクエスト対応：HERO H1のサイズアップと位置調整 */
+.hero-title-seo {
+    font-size: 3.5rem; /* サイズアップ */
+    margin-bottom: 30px;
+    margin-top: -30px; /* 位置を上に調整 */
+}
+
+@media (max-width: 768px) {
+    .hero-title-seo {
+        font-size: 2.2rem;
+        margin-top: -20px;
+        margin-bottom: 24px;
+    }
+}
+
+/* リクエスト対応：HERO H1の3行化と位置調整 */
+.hero-title-seo {
+    margin-top: -60px; /* さらに上に */
+    margin-bottom: 20px; /* msakai合同会社との距離を縮める */
+    text-align: center;
+    line-height: 1.3;
+}
+
+/* スマホ調整 */
+@media (max-width: 768px) {
+    .hero-title-seo {
+        margin-top: -40px;
+        margin-bottom: 16px;
+        font-size: 2rem;
+    }
+}
