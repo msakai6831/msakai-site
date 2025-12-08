@@ -1321,3 +1321,19 @@ footer {
     padding: 10px 20px;
   }
 }
+
+/* Hero新H1用スタイル */
+.hero-title-seo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1.4;
+    margin-bottom: 24px;
+    letter-spacing: 0.05em;
+}
+
+@media (max-width: 768px) {
+    .hero-title-seo {
+        font-size: 1.1rem;
+        margin-bottom: 16px;
+    }
+}
