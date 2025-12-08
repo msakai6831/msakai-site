@@ -1494,3 +1494,48 @@ h2.hero-slogan {
         display: none;
     }
 }
+
+/* リクエスト対応：Introセクションの余白短縮・H2調整 */
+/* PC上でHEROとの距離を縮める */
+@media (min-width: 769px) {
+    .section-intro {
+        padding-top: 30px; /* 元の60pxから半減 */
+        padding-bottom: 40px;
+    }
+}
+
+.intro-title {
+    margin-bottom: 20px; /* 余白削減 */
+    line-height: 1.25;   /* 行間詰め */
+    margin-top: 0;       /* 上余白リセット（念のため） */
+}
+
+.intro-lead {
+    margin-bottom: 10px; /* 上のラベルとの距離も詰める */
+}
+
+/* スマホ用最適化 */
+@media (max-width: 768px) {
+    .section-intro {
+        padding-top: 24px;
+        padding-bottom: 32px;
+    }
+    .intro-title {
+        font-size: 1.4rem;
+        margin-bottom: 16px;
+    }
+}
+
+/* リクエスト対応：PC版 HERO下の余白短縮 */
+@media (min-width: 769px) {
+    .hero {
+        height: auto !important; /* 全画面から自動調整へ変更 */
+        min-height: 580px !important; /* 高さを少し短くして下の余白を詰める */
+        padding-bottom: 20px !important; /* 下部のパディングを最小限に */
+    }
+
+    /* HERO高さ変更に伴い、H1の上位置も微調整（上がりすぎ防止） */
+    .hero-title-seo {
+        margin-top: -40px !important; 
+    }
+}
