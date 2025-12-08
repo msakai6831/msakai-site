@@ -1539,3 +1539,33 @@ h2.hero-slogan {
         margin-top: -40px !important; 
     }
 }
+
+/* リクエスト対応：HERO背景画像の復元と余白調整 */
+@media (min-width: 769px) {
+    /* HEROを元の高さと背景位置に戻す */
+    .hero {
+        height: 85vh !important; /* 元の全画面に近いが少しだけ高さを抑える */
+        min-height: 700px !important;
+        background-position: center 90% !important; /* スマホが見える位置に調整 */
+        padding-bottom: 0 !important;
+        margin-bottom: -40px !important; /* ネガティブマージンで下のセクションを引き寄せる */
+    }
+
+    /* H1位置を元の-100pxに戻す */
+    .hero-title-seo {
+        margin-top: -100px !important;
+    }
+
+    /* 下のIntroセクションの上余白をほぼゼロにして引き上げる */
+    .section-intro {
+        padding-top: 0 !important;
+        position: relative;
+        z-index: 10; /* 背景が重なっても文字が隠れないように */
+        background-color: transparent !important; /* 背景色で隠さない場合（必要なら白にする） */
+    }
+    
+    /* Introセクションの背景が白だとHERO下部にかぶさるため、白背景を明示 */
+    .section-intro {
+       background-color: #fff !important; 
+    }
+}
