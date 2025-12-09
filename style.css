@@ -62,6 +62,13 @@ img {
     padding: 0 var(--spacing-md);
 }
 
+@media (max-width: 768px) {
+    .container {
+        padding: 0 1.5rem;
+        /* Increased side padding for mobile readability */
+    }
+}
+
 /* Header */
 #header {
     position: sticky;
@@ -425,8 +432,10 @@ img {
 }
 
 .service-list li {
-    margin-bottom: 0.5rem;
-    line-height: 1.6;
+    margin-bottom: 1rem;
+    /* Increased spacing */
+    line-height: 1.8;
+    /* Increased line-height */
 }
 
 /* Company Section Styles */
@@ -1184,6 +1193,12 @@ footer {
     .ideal-footer {
         font-size: 0.95rem;
         line-height: 1.8;
+        /* Ensure 1.8 for text */
+    }
+
+    /* Paragraph specific line-height */
+    p {
+        line-height: 1.8;
     }
 
     /* COMPANY：プロフィール画像＆書影調整 */
@@ -1249,6 +1264,15 @@ footer {
     .why-card {
         width: 100%;
         max-width: 480px;
+        padding: 42px 1.8rem;
+        /* 1.5x padding */
+    }
+
+    .why-card-title {
+        font-size: 1.3rem;
+        /* Slightly larger */
+        line-height: 1.75;
+        /* 1.7 - 1.8 */
     }
 
     /* VOICE：カードを少しコンパクトに */
@@ -1391,9 +1415,23 @@ h2.hero-slogan {
         margin-bottom: 32px;
         /* SP: 32px */
     }
+
+    .why-moved-slogan {
+        font-size: 22px;
+        /* 20px + 10% */
+        margin-top: 20px;
+        /* 0 + 20px */
+        margin-bottom: 52px;
+        /* 32px + 20px */
+    }
+
+    .service-header {
+        font-size: 1.4rem;
+        /* 1 step smaller from 1.8rem */
+        padding-bottom: 0.5rem;
+        /* Use spacing for hierarchy */
+    }
 }
-
-
 
 /* リクエスト対応：HERO H1のサイズアップと位置調整 */
 .hero-title-seo {
@@ -1731,11 +1769,14 @@ h2.hero-slogan {
 /* スマホでは少しだけサイズ調整 */
 @media (max-width: 768px) {
     .hero-slogan {
-        font-size: 18px;
-        /* スマホ: 16-18px */
-        margin-top: 16px;
-        margin-bottom: 22px;
-        line-height: 1.4;
+        font-size: 20px;
+        /* スマホ: 18px -> 20px (+10-15%) */
+        margin-top: 36px;
+        /* 16px + 20px */
+        margin-bottom: 42px;
+        /* 22px + 20px */
+        line-height: 1.7;
+        /* 1.6 - 1.8 */
     }
 }
 
