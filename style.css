@@ -180,7 +180,7 @@ img {
     z-index: 2;
     max-width: 800px;
     padding: 0 var(--spacing-md);
-    animation: fadeInUp 1s ease-out forwards;
+    /* animation: fadeInUp 1s ease-out forwards; Removed on user request */
 }
 
 .hero-company-name {
@@ -797,7 +797,8 @@ footer {
     justify-content: center;
     gap: 32px;
     max-width: 1000px;
-    margin: 0 auto 100px auto;
+    margin: 0 auto 40px auto;
+    /* Reduced from 100px to bring slogan very close */
     /* Added bottom margin */
 }
 
@@ -1241,7 +1242,8 @@ footer {
     }
 
     .why-grid {
-        margin-bottom: 72px;
+        margin-bottom: 24px;
+        /* Reduced from 72px for mobile */
     }
 
     .why-card {
@@ -1360,22 +1362,38 @@ h2.hero-slogan {
 
 /* リクエスト対応：Whyセクションへのスローガン移動 */
 .why-moved-slogan {
-    font-size: 2.2rem;
-    font-weight: 900;
+    font-size: 28px;
+    /* Increased from 24px to 28px */
+    font-weight: 600;
+    /* SemiBold */
     text-align: center;
-    margin-top: 60px;
-    margin-bottom: 60px;
-    line-height: 1.4;
+    margin-top: 0;
+    /* Removed top margin entirely as gap is handled by grid's bottom margin */
+    margin-bottom: 40px;
+    /* 40px remains the same */
+    line-height: 1.6;
     letter-spacing: 0.05em;
+    max-width: 700px;
+    /* Restrict width for better readability */
+    width: 90%;
+    /* Responsive width */
+    margin-left: auto;
+    margin-right: auto;
+    animation: none;
+    /* Static display */
 }
 
 @media (max-width: 768px) {
     .why-moved-slogan {
-        font-size: 1.6rem;
-        margin-top: 40px;
-        margin-bottom: 40px;
+        font-size: 20px;
+        /* Increased from 18px */
+        margin-top: 0;
+        margin-bottom: 32px;
+        /* SP: 32px */
     }
 }
+
+
 
 /* リクエスト対応：HERO H1のサイズアップと位置調整 */
 .hero-title-seo {
@@ -1667,4 +1685,78 @@ h2.hero-slogan {
 .hero::before {
     z-index: 1 !important;
     display: block !important;
+}
+
+/* リクエスト対応：スローガンの見た目を強調（Hero内配置用） */
+.hero-slogan {
+    display: block;
+    /* Hero内ではブロック要素として配置 */
+    font-size: 22px;
+    /* PC: 20-22px */
+    font-weight: 700;
+    margin-top: 24px;
+    /* H1との距離: やや広め */
+    margin-bottom: 30px;
+    /* CTA/Companyとの距離: 少し詰める (40px -> 30px) */
+    letter-spacing: 0.05em;
+    line-height: 1.4;
+    /* 行間調整 */
+
+    opacity: 0;
+    transform: translateY(32px);
+    animation: fadeInUpSlogan 0.9s ease-out 0.4s forwards;
+}
+
+/* Remove animation from H1 so it shows instantly */
+.hero-title-seo {
+    opacity: 1;
+    transform: none;
+    animation: none;
+    margin-bottom: 0 !important;
+    /* Slogan側のmargin-topで制御するためリセット */
+}
+
+@keyframes fadeInUpSlogan {
+    from {
+        opacity: 0;
+        transform: translateY(32px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* スマホでは少しだけサイズ調整 */
+@media (max-width: 768px) {
+    .hero-slogan {
+        font-size: 18px;
+        /* スマホ: 16-18px */
+        margin-top: 16px;
+        margin-bottom: 22px;
+        line-height: 1.4;
+    }
+}
+
+/* Further reduce gap between Hero and Intro */
+@media (min-width: 769px) {
+    .hero {
+        margin-bottom: -40px !important;
+        /* Adjusted to balance with button margin */
+        padding-bottom: 0 !important;
+    }
+
+    .hero .btn-service-list {
+        margin-bottom: 0;
+        /* Reset button margin inside hero as layout changed */
+    }
+
+    .section-intro {
+        padding-top: 60px !important;
+        /* Restore padding for Intro section as slogan is gone from it */
+        position: relative;
+        z-index: 10;
+        background-color: #fff !important;
+    }
 }
