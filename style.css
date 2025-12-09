@@ -1534,6 +1534,23 @@ h2.hero-slogan {
     /* 上余白リセット（念のため） */
 }
 
+/* New Subtitle Style */
+.intro-subtitle {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--color-text);
+    margin-bottom: 20px;
+    letter-spacing: 0.05em;
+    line-height: 1.4;
+}
+
+@media (max-width: 768px) {
+    .intro-subtitle {
+        font-size: 1.1rem;
+        margin-bottom: 16px;
+    }
+}
+
 .intro-lead {
     margin-bottom: 10px;
     /* 上のラベルとの距離も詰める */
