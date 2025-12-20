@@ -1039,6 +1039,8 @@ footer {
 
 .ideal-list-container {
     margin-bottom: 32px;
+    display: inline-block;
+    text-align: left;
 }
 
 .ideal-item {
@@ -1047,6 +1049,8 @@ footer {
     font-weight: 700;
     line-height: 2;
     margin-bottom: 0;
+    padding-left: 1em;
+    text-indent: -1em;
 }
 
 .ideal-footer {
